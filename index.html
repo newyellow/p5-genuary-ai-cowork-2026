@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Genuary 2026 - Creative Coding Challenge</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding: 40px 20px;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      color: white;
+      margin-bottom: 60px;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .subtitle {
+      font-size: 1.2em;
+      opacity: 0.9;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    .day-card {
+      background: white;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-decoration: none;
+      color: #333;
+      display: block;
+    }
+
+    .day-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+    }
+
+    .day-card.disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .day-card.disabled:hover {
+      transform: none;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .day-number {
+      font-size: 2em;
+      font-weight: bold;
+      color: #667eea;
+      margin-bottom: 8px;
+    }
+
+    .day-title {
+      font-size: 1.1em;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #444;
+    }
+
+    .day-prompt {
+      font-size: 0.9em;
+      color: #666;
+      line-height: 1.4;
+    }
+
+    .status {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 12px;
+      font-size: 0.85em;
+      margin-top: 12px;
+      font-weight: 500;
+    }
+
+    .status.completed {
+      background: #d4edda;
+      color: #155724;
+    }
+
+    .status.upcoming {
+      background: #f8f9fa;
+      color: #6c757d;
+    }
+
+    footer {
+      text-align: center;
+      color: white;
+      margin-top: 60px;
+      opacity: 0.9;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Genuary 2026</h1>
+      <p class="subtitle">31 Days of Creative Coding</p>
+    </header>
+
+    <div class="grid">
+      <!-- Day 1 -->
+      <a href="./days/day01/" class="day-card">
+        <div class="day-number">Day 01</div>
+        <div class="day-title">One color, one shape</div>
+        <div class="day-prompt">使用一種顏色、一種形狀進行創作</div>
+        <span class="status completed">已完成</span>
+      </a>
+
+      <!-- Day 2-31 (待完成) -->
+      <div class="day-card disabled">
+        <div class="day-number">Day 02</div>
+        <div class="day-title">待更新</div>
+        <div class="day-prompt">題目待確認</div>
+        <span class="status upcoming">即將到來</span>
+      </div>
+
+      <div class="day-card disabled">
+        <div class="day-number">Day 03</div>
+        <div class="day-title">待更新</div>
+        <div class="day-prompt">題目待確認</div>
+        <span class="status upcoming">即將到來</span>
+      </div>
+
+      <div class="day-card disabled">
+        <div class="day-number">Day 04</div>
+        <div class="day-title">待更新</div>
+        <div class="day-prompt">題目待確認</div>
+        <span class="status upcoming">即將到來</span>
+      </div>
+
+      <div class="day-card disabled">
+        <div class="day-number">Day 05</div>
+        <div class="day-title">待更新</div>
+        <div class="day-prompt">題目待確認</div>
+        <span class="status upcoming">即將到來</span>
+      </div>
+
+      <!-- 更多日期卡片可以在後續添加 -->
+    </div>
+
+    <footer>
+      <p>
+        Genuary 是一個為期一個月的生成藝術挑戰<br>
+        <a href="https://genuary.art/" target="_blank">https://genuary.art/</a>
+      </p>
+      <p style="margin-top: 20px; font-size: 0.9em;">
+        查看 <a href="./prompts.md">所有題目</a> |
+        <a href="./core-idea.md">核心理念</a> |
+        <a href="https://github.com/newyellow/p5-genuary-ai-cowork-2026" target="_blank">GitHub</a>
+      </p>
+    </footer>
+  </div>
+</body>
+</html>
